@@ -1,3 +1,4 @@
+import 'package:aviao/presentation/screens/home/about_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:aviao/core/constants/colors.dart';
 import 'package:aviao/core/constants/icons.dart';
@@ -33,8 +34,22 @@ class _HomeBodyState extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
     List<String> cities = getCitiesNames();
-    return SafeArea(
-      child: SingleChildScrollView(
+    return Scaffold(
+      endDrawer: AboutScreen(),
+
+      // appBar: AppBar(
+      //   leading: null,
+      //   actions: [
+      //     IconButton(
+      //       onPressed: () {
+      //         Navigator.pushNamed(context, AppRouter.about);
+      //       },
+      //       icon: const Icon(Icons.info_outline),
+      //     )
+      //   ],
+      //   backgroundColor: Colors.transparent,
+      // ),
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -75,7 +90,7 @@ class _HomeBodyState extends State<HomeBody> {
                         bottomLeft: Radius.circular(30.r),
                         bottomRight: Radius.circular(30.r))),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(32.w, 72.h, 0, 0),
+                  padding: EdgeInsets.fromLTRB(20.w, 72.h, 0, 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -156,7 +171,7 @@ class _HomeBodyState extends State<HomeBody> {
             ]),
             SizedBox(height: 26.h),
             Padding(
-              padding: EdgeInsets.only(left: 32.w),
+              padding: EdgeInsets.only(left: 20.w),
               child: Text(
                 'Popular Destinations',
                 style: LightTextStyles.SFBody(
@@ -166,13 +181,13 @@ class _HomeBodyState extends State<HomeBody> {
             SizedBox(height: 16.h),
             dropCityName != 'All'
                 ? Padding(
-                    padding: EdgeInsets.only(left: 8.w),
+                    padding: EdgeInsets.only(left: 4.w),
                     child: TripsInCityCardsListView(
                       city: dropCityName,
                     ),
                   )
                 : Padding(
-                    padding: EdgeInsets.only(left: 8.w),
+                    padding: EdgeInsets.only(left: 4.w),
                     child: CitiesCardsListView(
                       city: citiesData,
                     ),
@@ -197,8 +212,11 @@ class TripsInCityCardsListView extends StatelessWidget {
 
     return SizedBox(
       width: double.infinity,
-      height: 229.h,
+      height: 300.h,
       child: ListView.builder(
+          padding: EdgeInsets.only(
+            bottom: 8.h,
+          ),
           // Should set a szie of parent widget
           scrollDirection: Axis.horizontal,
 
@@ -283,8 +301,11 @@ class CitiesCardsListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 229.h,
+      height: 300.h,
       child: ListView.builder(
+          padding: EdgeInsets.only(
+            bottom: 8.h,
+          ),
           // Should set a szie of parent widget
           scrollDirection: Axis.horizontal,
 

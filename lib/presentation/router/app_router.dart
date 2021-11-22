@@ -2,6 +2,7 @@
 
 import 'package:aviao/presentation/screens/explore/category_trips_screen.dart';
 import 'package:aviao/presentation/screens/explore/trip_detail_screen.dart';
+import 'package:aviao/presentation/screens/home/about_screen.dart';
 import 'package:aviao/presentation/screens/home/city_landmarks_screen.dart';
 import 'package:aviao/presentation/screens/luanch_screen.dart';
 import 'package:aviao/presentation/screens/onboarding_screen.dart';
@@ -25,7 +26,7 @@ class AppRouter {
   static const String cityLandmarks = '/city_landmarks_screen';
   static const String categortTrips = '/category_trips_screen';
   static const String tripDetials = '/trip_detail_screen';
-
+  static const String about = '/about_screen';
   const AppRouter._();
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -61,6 +62,10 @@ class AppRouter {
           builder: (_) => CityLandMarkers(
             cityName: argsCityLandmarkers,
           ),
+        );
+      case about:
+        return MaterialPageRoute(
+          builder: (_) => AboutScreen(),
         );
       default:
         throw const Text('Route not found!');

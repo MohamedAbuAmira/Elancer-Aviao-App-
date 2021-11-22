@@ -1,3 +1,4 @@
+import 'package:aviao/presentation/screens/home/about_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:aviao/core/constants/colors.dart';
@@ -45,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: AboutScreen(),
       body: _screens[_selectedScreenIndex]['Screen'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectScreen,

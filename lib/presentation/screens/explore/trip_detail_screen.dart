@@ -57,7 +57,7 @@ class TripDetailScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 32.w),
+        padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 10.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -165,7 +165,7 @@ class TripDetailScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 50.h),
+            SizedBox(height: 40.h),
           ],
         ),
       ),

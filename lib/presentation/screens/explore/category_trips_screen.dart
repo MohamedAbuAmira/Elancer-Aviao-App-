@@ -54,7 +54,14 @@ class _CategoryTripsScreenState extends State<CategoryTripsScreen> {
       return trip.categories.contains(widget.id);
     }).toList();
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
