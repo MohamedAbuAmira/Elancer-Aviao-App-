@@ -19,7 +19,7 @@ class AboutScreen extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
           ),
           elevation: 0,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white.withOpacity(0.5),
           centerTitle: true,
           title: Text(
             _message,
@@ -42,7 +42,7 @@ class AboutScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/avatar.jpg'),
+                  backgroundImage: AssetImage('assets/images/avatar.jpeg'),
                   radius: 100.r,
                 ),
                 Padding(
