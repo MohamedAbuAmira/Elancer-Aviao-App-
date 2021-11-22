@@ -1,0 +1,7 @@
+<svg width="200" height="409" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100.5 2L40 393h121L100.5 2z" stroke="#DBE8EB" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M100.5 50L91 111h19l-9.5-61z" stroke="#DBE8EB" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M90 123h22.5m-24 8h25M87 139h28m-29 8h30.5M85 155h32.5M84 163h34.5m-36 8h37M81 179h40m-41 8h42.5m-44 8h45m-46 8H125m-48.5 8H126m-51 8h52.5M74 227h54.5m-56 8h57m-58 8h59M70 251h62m-63 8h64m-65.5 8h67m-68 8h69M65 283h72m-73 8h74m-75.5 8h77m-78 8h79m-80 8h81M59 323h84m-85 8h86m-87 8h88.5m-90 8h91m-92 8H148m-95 8h96m-97 8h98.5M51 379h100.5" stroke="#DBE8EB" stroke-width="3" stroke-linecap="round"/>
+  <path d="M117.5 113.146l17 2.629V220m-51-106.854l-17 2.629V222" stroke="#DBE8EB" stroke-width="3"/>
+  <path d="M2 393h196M64 407h72" stroke="#DBE8EB" stroke-width="3" stroke-linecap="round"/>
+</svg>
