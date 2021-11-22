@@ -10,6 +10,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
           actionsIconTheme:
               const IconThemeData(color: LightColors.deepDarkColor),
@@ -33,27 +34,32 @@ class AboutScreen extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     LightColors.blueSkyColor,
-                    Colors.blueGrey,
-                    LightColors.greyTwoColor
+                    LightColors.blueSkyLightColor,
+                    Colors.blueGrey.shade100,
                   ]),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/photo.jpeg'),
+                  backgroundImage: AssetImage('assets/images/avatar.jpg'),
                   radius: 100.r,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text('Mohammed Abu Amira',
-                      style: LightTextStyles.SFH6(
-                          textColor: LightColors.darkColor, isLight: false)),
+                  child: Text(
+                    'Mohammed Abu Amira',
+                    style: LightTextStyles.SFH6(
+                        textColor: LightColors.darkColor, isLight: false),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 Text(
-                    'Trainee as Flutter Developer \n in eLancer project at UCASTI',
-                    style: LightTextStyles.SFBody(
-                        textColor: LightColors.darkColor)),
+                  'Trainee as Flutter Developer \n in eLancer project at UCASTI',
+                  style:
+                      LightTextStyles.SFBody(textColor: LightColors.darkColor),
+                  textAlign: TextAlign.center,
+                ),
                 Divider(
                   color: Colors.white,
                   indent: 20.0,
@@ -61,17 +67,17 @@ class AboutScreen extends StatelessWidget {
                   thickness: 1.5,
                 ),
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ItemCard(
-                        displayText: 'mohammed.tayser94@gmail.com',
-                        displayIcon: Icon(Icons.email_outlined)),
+                      displayText: 'mohammed.tayser94@gmail.com',
+                    ),
                     ItemCard(
-                        displayText: '+97059776792',
-                        displayIcon: Icon(Icons.mobile_friendly_rounded)),
+                      displayText: '+97059776792',
+                    ),
                     ItemCard(
-                        displayText: 'Gaza Strip, Palestine',
-                        displayIcon: Icon(Icons.location_on)),
+                      displayText: 'Gaza Strip, Palestine',
+                    ),
                   ],
                 ),
               ],
@@ -81,9 +87,8 @@ class AboutScreen extends StatelessWidget {
 
 class ItemCard extends StatelessWidget {
   final String? displayText;
-  final Icon? displayIcon;
 
-  ItemCard({Key? key, this.displayText, this.displayIcon}) : super(key: key);
+  ItemCard({Key? key, this.displayText}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -99,7 +104,6 @@ class ItemCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            displayIcon!,
             Text(displayText!,
                 style: LightTextStyles.SFH6(
                     textColor: LightColors.deepDarkColor, isLight: false)),

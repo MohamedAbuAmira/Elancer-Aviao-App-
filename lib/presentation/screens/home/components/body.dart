@@ -244,7 +244,7 @@ class TripsCityCard extends StatelessWidget {
       padding: EdgeInsets.only(left: 15.w),
       child: SizedBox(
           height: 229.h,
-          width: 200.w,
+          width: 250.w,
           child: InkWell(
             onTap: () {
               Navigator.of(context).pushNamed(
@@ -333,7 +333,7 @@ class CityCard extends StatelessWidget {
       padding: EdgeInsets.only(left: 15.w),
       child: SizedBox(
           height: 229.h,
-          width: 200.w,
+          width: 250.w,
           child: InkWell(
             onTap: () {
               Navigator.of(context).pushNamed(
