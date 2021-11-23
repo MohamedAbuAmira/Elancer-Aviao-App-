@@ -57,14 +57,6 @@ class CityLandMarkers extends StatelessWidget {
                     itemBuilder: (ctx, index) =>
                         CityLandMarkersListTile(cityTrip: _tripsInCity[index])),
               ),
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-              //     for (int i = 0; i < _tripsInCity.length; i++)
-              //       CityLandMarkersListTile(cityTrip: _tripsInCity[i]),
-              //   ],
-              // ),
             ],
           ),
         ),
@@ -87,7 +79,7 @@ class CityLandMarkersListTile extends StatelessWidget {
     print(cityTrip.id.toString());
     return SizedBox(
       width: 315.w,
-      height: 80.h,
+      height: 90.h,
       child: InkWell(
         onTap: () {
           Navigator.of(context).pushNamed(
@@ -99,8 +91,8 @@ class CityLandMarkersListTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 80.w,
-              height: 82.h,
+              width: 90.w,
+              height: 90.h,
               clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.r),
@@ -111,27 +103,27 @@ class CityLandMarkersListTile extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 5.w,
+              width: 16.w,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(cityTrip.title,
-                    style: LightTextStyles.SFH4(
-                        textColor: LightColors.darkColor, isLight: false)),
-                SizedBox(
-                  width: 16.w,
-                ),
-                Container(
-                  width: 219.w,
-                  height: 32.h,
-                  child: Text(
+            Flexible(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(cityTrip.title,
+                      style: LightTextStyles.SFH6(
+                          textColor: LightColors.darkColor, isLight: false)),
+                  SizedBox(
+                    width: 2.w,
+                  ),
+                  Text(
                     cityTrip.description,
                     style: LightTextStyles.SFBody(
                         textColor: LightColors.greyOneColor),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               width: 10.w,

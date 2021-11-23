@@ -47,10 +47,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 style:
                     LightTextStyles.SFBody(textColor: LightColors.greyOneColor),
               ),
-              SizedBox(
-                height: 24.h,
-              ),
-              SearchField(),
+              // SizedBox(
+              // height: 24.h,
+              // ),
+              // SearchField(),
               SizedBox(
                 height: 24.h,
               ),
@@ -162,9 +162,9 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 height: 32.h,
               ),
               tabSelected == 0
-                  ? SizedBox(height: 360.h, child: CategoriesCards())
+                  ? SizedBox(height: 440.h, child: CategoriesCards())
                   : SizedBox(
-                      height: 360.h,
+                      height: 440.h,
                       child: TripsItemsCard(
                         displayTrips: _filteredTrips,
                       ))

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AboutScreen extends StatelessWidget {
-  String _message = 'About';
+  String _message = 'About Developer';
 
   AboutScreen({Key? key}) : super(key: key);
   @override
@@ -28,6 +28,7 @@ class AboutScreen extends StatelessWidget {
           ),
         ),
         body: Container(
+            alignment: Alignment.center,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -70,13 +71,16 @@ class AboutScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ItemCard(
-                      displayText: 'mohammed.tayser94@gmail.com',
+                      displayText: 'Mohammed.tayser94@gmail.com',
+                    ),
+                    ItemCard(
+                      displayText: 'Mechatronic Engineering, Azhar Uni.',
                     ),
                     ItemCard(
                       displayText: '+97059776792',
                     ),
                     ItemCard(
-                      displayText: 'Gaza Strip, Palestine',
+                      displayText: 'Bait Lahia, Gaza Strip, Palestine',
                     ),
                   ],
                 ),
@@ -95,18 +99,18 @@ class ItemCard extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       elevation: 30,
       shadowColor: Colors.black,
-      margin: EdgeInsets.all(25),
+      margin: EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
       shape: OutlineInputBorder(
           borderRadius: BorderRadius.circular(25.r),
           borderSide: BorderSide(color: Colors.orangeAccent, width: 0.0)),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(displayText!,
                 style: LightTextStyles.SFH6(
-                    textColor: LightColors.deepDarkColor, isLight: false)),
+                    textColor: LightColors.deepDarkColor, isLight: true)),
           ],
         ),
       ),

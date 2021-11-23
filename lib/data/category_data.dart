@@ -37,22 +37,22 @@ const CategoriesData = [
     imageUrl:
         'https://images.unsplash.com/photo-1414541944151-2f3ec1cfd87d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80',
   ),
+  // Category(
+  //   id: 'c7',
+  //   title: 'Mosques',
+  //   imageUrl:
+  //       'https://images.unsplash.com/flagged/photo-1558113118-e42e558b352a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+  // ),
   Category(
-    id: 'c7',
-    title: 'Mosques',
+    id: 'c9',
+    title: 'Rivers',
     imageUrl:
-        'https://images.unsplash.com/flagged/photo-1558113118-e42e558b352a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+        'https://images.unsplash.com/photo-1455577380025-4321f1e1dca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
   ),
   Category(
     id: 'c8',
     title: 'others',
     imageUrl:
         'https://7ifz.com/modawan/images/ooJS3hrcE4WV85bH7FArMzi2wU7di9bYVc4HISBp.jpeg',
-  ),
-  Category(
-    id: 'c9',
-    title: 'Rivers',
-    imageUrl:
-        'https://www.collinsdictionary.com/images/full/river_377603497_1000.jpg',
   ),
 ];
